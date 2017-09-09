@@ -13,7 +13,7 @@ SKIP1: INX H
        DCR C
        JNZ LOOP1
        
-       LDA 3050H
+       STA 3050H
        
        LXI H, 3000H    ; re-initializing the memory location to run the loop again 
        MVI C, AH
@@ -27,6 +27,6 @@ SKIP2: INX H
        DCR C
        JNZ LOOP2
        
-       LDA 3051H  
+       STA 3051H  
        
        HLT
