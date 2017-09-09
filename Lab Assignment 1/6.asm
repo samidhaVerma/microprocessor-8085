@@ -13,6 +13,6 @@ LOOP: MOV B, M
       DCR C
       JNZ LOOP
       
-      LDA 3050H
+      STA 3050H
       
       HLT
