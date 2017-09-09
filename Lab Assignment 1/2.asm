@@ -1,5 +1,7 @@
-;to find the largest of three numbers stored in the memory location 2050H, 2051H and 2052H, assuming that all three numbers are unequal.
+; to find the largest of three numbers stored in the memory location 2050H, 2051H and 2052H, 
+; assuming that all three numbers are unequal.
 
+       lxi h, 2050h
        mov a, m
        inx h
        cmp m
