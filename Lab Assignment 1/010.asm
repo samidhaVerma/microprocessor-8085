@@ -7,8 +7,8 @@
       INX H
       LXI D, 3051H
       
-LOOP: LDA H
-      STA D
+LOOP: LDAX H
+      STAX D
       INX H
       INX D
       DCR C
