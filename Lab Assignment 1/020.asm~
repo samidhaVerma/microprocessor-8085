@@ -1,8 +1,0 @@
-; To sort the list of bytes, in ascending order, stored in the memory starting from 2061H. 
-; The count of the bytes in the list is stored at memory location 2060H.	
-
-        LXI H, 2060H
-        MOV C, M
-        DCR C
-DOPASS: LXI H, 2061H
-        MOV D, C
