@@ -1,1 +1,1 @@
-Assignments given in Microprocessor Lab in 5th Semester.
+Assignments done in Microprocessors (8085 and 8086) in 5th Semester.
