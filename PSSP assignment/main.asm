@@ -6,30 +6,30 @@
 ;2557	Value of M3
         
           MVI	A, 98	
-		      OUT	03	
-		      MVI	A, 9A	
-    	    OUT	0B	
-START:    MOV B, A	
+          OUT	03	
+	  MVI	A, 9A	
+	  OUT	0B	
+START:    MOV   B, A	
           IN 	0A	    ;Input V
           CMP	B 	    ;Check whether V crossed peak
-		      JZ	START	
-       		IN 	00	    ;Input Im cos phi
-		      CMA		
-		      SUI	80	
-		      STA	2552	
-		      IN 	00	      ;Input Vdc
-		      CMA		
-		      SUI	80	
-		      STA 2550	
-		      CALL DIVISION	  ;M = 1 / Ycos phi
-    	    LXI	H, 2553	    ;Stores M
+	  JZ	START	
+	  IN 	00	    ;Input Im cos phi
+	  CMA		
+	  SUI	80	
+	  STA	2552	
+	  IN 	00	      ;Input Vdc
+	  CMA		
+	  SUI	80	
+	  STA 2550	
+	  CALL DIVISION	     ;M = 1 / Ycos phi
+	  LXI	H, 2553	    ;Stores M
           MOV	B, M	
-		      INX	H 	
-		      INX	H 	
-		      MOV	A, M	     ;M1 in accumulator
-		      CMP	B 	
-		      JNC TRIP1	  ;Zone 1 trip
-	      	INX H 	
+	  INX	H 	
+	  INX	H 	
+	  MOV	A, M	     ;M1 in accumulator
+	  CMP	B 	
+	  JNC TRIP1	  ;Zone 1 trip
+	  INX   H 	
       		MOV	A, M	     ;M2 in accumulator
     	    CMP	B 	
 		      JNC TRIP2	   ;Zone 2 trip
